@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class MitraController extends Controller
+class MitraController implements ControllerInterface
 {
     /**
      * Display a listing of the resource.
