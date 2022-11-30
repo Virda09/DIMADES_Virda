@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label"> Nama Admin PT </label>
-                        <input type="text" name="namaAdminPt" class="form-control" value="{{old('namaAdminPt')}}">
+                        <input type="text" name="namaAdmin" class="form-control" value="{{old('namaAdmin')}}">
                 </div>
                 <div class="form-group">
                     <label class="form-label"> Jenis Kelamin </label>

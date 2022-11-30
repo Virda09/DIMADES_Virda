@@ -19,7 +19,7 @@ class MitraController implements ControllerInterface
     {
         $data = Mitra::orderBy('name', 'ASC')->paginate(10);
         $this->data['data'] = $data;
-        return view('admin.mitra.index',$this->data);
+        return view('admin.kategori.index',$this->data);
     }
 
     /**
@@ -29,7 +29,7 @@ class MitraController implements ControllerInterface
      */
     public function create()
     {
-        return view('admin.mitra.create');
+        return view('admin.kategori.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class MitraController implements ControllerInterface
             }else{
                 Session::flash('error', "Gagal Simpan");
             }
-            return redirect()->route('mitra.index');
+            return redirect()->route('kategori.index');
         } catch (\Throwable $th) {
             Session::flash('error', "Periksa kembali isian");
             return redirect()->back();
@@ -74,7 +74,7 @@ class MitraController implements ControllerInterface
     {
         $data = Mitra::findOrFail(Crypt::decrypt($id));
         $this->data['data'] = $data;
-        return view('admin.mitra.edit', $this->data);
+        return view('admin.kategori.edit', $this->data);
     }
 
     /**
@@ -93,7 +93,7 @@ class MitraController implements ControllerInterface
             }else{
                 Session::flash('error', "Gagal Simpan");
             }
-            return redirect()->route('mitra.index');
+            return redirect()->route('kategori.index');
         } catch (\Throwable $th) {
             Session::flash('error', "Periksa kembali isian");
             return redirect()->back();
@@ -114,6 +114,6 @@ class MitraController implements ControllerInterface
         }else{
             Session::flash('error', "Gagal Delete");
         }
-        return redirect()->route('mitra.index');
+        return redirect()->route('kategori.index');
     }
 }

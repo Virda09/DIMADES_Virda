@@ -2,6 +2,7 @@
     @section('content')
             <form action="{{ route('mitra.update',Crypt::encrypt($data->id)) }}" method="post">
             {{ csrf_field() }}
+            {{method_field('PUT')}}
             <div class="content">
                 <div class="row">
                     <div class="col-lg-6">
@@ -18,7 +19,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label"> Nama Admin PT </label>
-                        <input type="text" name="namaAdminPt" class="form-control" value="{{$data->namaAdminpt}}">
+                        <input type="text" name="namaAdmin" class="form-control" value="{{$data->namaAdmin}}">
                 </div>
                 <div class="form-group">
                     <label class="form-label"> Jenis Kelamin </label>
